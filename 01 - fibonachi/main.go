@@ -5,6 +5,12 @@ import (
 	"time"
 )
 
+/*
+Если необходимо ввести проверку на переполнение Int можно использовать math.MaxInt32/math.MaxInt64
+необходимо проверять до суммирования, что a не больше чем max-b.
+Второй вариант - использовать библиотеку safemath.CheckedAddU64 (Go 1.21+)
+*/
+
 // CalculateFibonacci необходимо найти число фибоначчи
 func CalculateFibonacci(n int) int {
 	if n < 0 {
